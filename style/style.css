@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#principal {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #555;
+    font-weight: bold;
+}
+
+#numero {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s;
+}
+
+#numero:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+#btn {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 25px;
+}
+
+#btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+#btn:active {
+    transform: translateY(0);
+}
+
+#resultado {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+#resultado:not(:empty) {
+    background-color: #ffe6e6;
+    color: #d63031;
+    border: 1px solid #fab1a0;
+}
+
+#primos {
+    background-color: #e8f5e8;
+    color: #27ae60;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #a8e6a3;
+    word-wrap: break-word;
+}
+
+#primos:empty {
+    display: none;
+}
+
+#naoprimos {
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#naoprimos:not(:empty) {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeaa7;
+}
+
+#naoprimos:empty {
+    display: none;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    #principal {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+    
+    #numero, #btn {
+        font-size: 14px;
+    }
+}
